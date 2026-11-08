@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: #07070d;
+  color: #f4f4f8;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+@layer components {
+  .btn { @apply w-full rounded-2xl px-6 py-4 text-lg font-bold transition active:scale-95 disabled:opacity-40 disabled:active:scale-100; }
+  .btn-red { @apply bg-gradient-to-b from-red-500 to-red-800 text-white shadow-lg shadow-red-900/40; }
+  .btn-teal { @apply bg-gradient-to-b from-teal-300 to-emerald-500 text-black shadow-lg shadow-emerald-900/30; }
+  .btn-ghost { @apply bg-white/10 text-white border border-white/10; }
+  .card { @apply rounded-2xl border border-white/10 bg-white/5 p-4; }
+  .input { @apply w-full rounded-2xl border border-white/15 bg-black/40 px-4 py-4 text-lg outline-none focus:border-teal-400; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation-duration: .01ms !important; } }
